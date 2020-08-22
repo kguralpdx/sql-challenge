@@ -57,7 +57,7 @@ ORDER BY
 	de.emp_no;
 
 
--- 5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
+-- 5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B".
 SELECT
 	first_name
 	, last_name
@@ -104,3 +104,16 @@ WHERE
 ORDER BY
 	d.dept_name
 	, de.emp_no;
+
+
+-- 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
+SELECT
+	last_name
+	, COUNT(last_name) as last_name_frequency
+FROM
+	employees
+GROUP BY
+	last_name
+ORDER BY
+	last_name_frequency DESC;
+
