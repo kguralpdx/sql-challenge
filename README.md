@@ -68,9 +68,11 @@ In order for the *Jupyter Notebook* to connect to the *PostgreSQL* database, som
 ### Analysis
 
 After creating the histogram and seeing that most of the employees fell within the $40,000 - $50,000, which was the lowest salary range, that seemed a little perplexing.
+
 ![sql.png](EmployeeSQL/histogram.PNG)
 
 To find out how those salaries broke out by title, a bar chart was then created.
+
 ![barchart.png](EmployeeSQL/barchart.PNG)
 
 
