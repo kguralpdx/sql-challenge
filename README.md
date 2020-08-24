@@ -3,9 +3,9 @@
 
 ## Overview
 
-Employee data from the 1980s and 1990s was stored in six CSV files. In order to analyse this data more easily, the data needed to be imported into tables in a *PostgreSQL* database. Through data engineering, tables were designed to hold the employee data in those six CSV files, a SQL database was created in *PostgreSQL* to house those tables and data, and then the data was imported for data analysis.
+Employee data from the 1980s and 1990s was stored in six CSV files. In order to analyse this data more easily, the data needed to be imported into tables in a *PostgreSQL* database. Through data engineering, tables for that employee data were first designed using *GenMyModel to create the ERD and then scripted, a SQL database was created in *PostgreSQL* to house those tables and data, and then the data was imported for data analysis.
 
-Then as a bonus, the goal was to determine if the data is fake using a histogram and bar chart.
+Then as a bonus, the goal was to determine if the data was fake using a histogram and bar chart.
 
 ### Files
 
