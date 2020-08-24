@@ -67,7 +67,7 @@ In order for the *Jupyter Notebook* to connect to the *PostgreSQL* database, som
 
 ### Analysis
 
-After creating the histogram and seeing that most of the employees fell within the $40,000 - $50,000, which was the lowest salary range, that seemed a little perplexing.
+After creating the histogram and seeing that most of the employees fell within the $40,000 - $50,000 range, which was the lowest salary range, that seemed a little perplexing.
 
 ![sql.png](EmployeeSQL/histogram.PNG)
 
@@ -75,18 +75,10 @@ To find out how those salaries broke out by title, a bar chart was then created.
 
 ![barchart.png](EmployeeSQL/barchart.PNG)
 
-
+Based on the results from that, it was concluded that the data was indeed fake as the highest paying jobs were staff positions and senior level positions were making less than their lower level counterparts. This was confirmed after searching for employee number 499942 and finding out that name is *April Foolsday*.
 
 ## Notes
 
-API keys are needed for the OpenWeatherMap and Google Places APIs. Both keys need to be in a file called **api_keys.py** and located in the **WeatherPy** and the ***VacationPy** folders. Keys should use the following variable names:
-* OpenWeatherMap API: api_key
-* Google Places API: g_key
+The *barchart.png* and *histogram.png* files saved in the *EmployeeSQL* folder are images from the *Jupyter Notebook* **Bonus** section.
 
-I didn't have any cities with humidities greater than 100% but I coded that section in just in case that should happen with a future pull.
-
-I created the function for plotting linear regressions but didn't actually use it. I created it after I had already completed everything else. Since my analysis was based on the data I had originally pulled, I didn't want to re-run everything to use the function and end up with different cities.
-
-The heatmap and the heatmap with the marker layer for hotels show repeating world maps when they first run. You have to zoom in to see just one world map. The heatmap with the markers layer also doesn't fill the whole cell so scrolling is involved. I have not yet figured out why this is occurring and how to fix it. 
-
-I ended up having cities that didn't pull a hotel name so I removed those rows from the dataframe before adding the marker layer.
+Just used one query to get all the data needed in the **Bonus** section and then used dataframes and groupbys to get what was needed for each chart. Did it with 2 queries originally, which was much faster, but figured I'd work on my *pandas^, *Python*, and *Jupyter Notebook* skills by using just one query and then manipulating that.
