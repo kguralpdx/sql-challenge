@@ -3,9 +3,9 @@
 
 ## Overview
 
-Through data engineering, design tables to hold employee data that is found in six CSV files, create a SQL database in PostgreSQL to house those tables and data, and then import the data for data analysis.
+Employee data from the 1980s and 1990s was stored in six CSV files. In order to analyse this data more easily, the data needed to be imported into tables in a *PostgreSQL* database. Through data engineering, tables were designed to hold the employee data in those six CSV files, a SQL database was created in *PostgreSQL* to house those tables and data, and then the data was imported for data analysis.
 
-As a bonus, then try to determine if the data is fake using a histogram and bar chart.
+Then as a bonus, the goal was to determine if the data is fake using a histogram and bar chart.
 
 ### Files
 
@@ -34,7 +34,7 @@ All the files that were created during this challenge are stored in this folder
 
 ## Steps to Run the Scripts
 
-The database created for this challenge is called **EmployeeSQL**. To create the tables, run the *schemas.sql* file in the order laid out in the file starting with the **Create tables** section. The tables scripts should be run in the following order:
+The database created for this challenge is called **EmployeeSQL**. To create the tables, run the *schemas.sql* file in the order laid out in the file starting with the **Create tables** section. The table scripts should be run in the following order:
 1. departments
 2. titles
 3. salaries
@@ -52,9 +52,27 @@ After that portion of the script has been run, load the tables by importing the 
 
 Once all the data has been loaded into the SQL tables, the rest of the *schemas.sql* script can be run starting with the **Create FKs** section. Then follow that with running the **Create Indexes** section. That should get the tables ready for querying.
 
-The queries in the *queries.sql* file can be run in any order as they are not dependent on each other. They are, however, listed in the order of the questions asked in this challenge.
+The queries in the *queries.sql* file can be run in any order as they are not dependent on one another. They are, however, listed in the order of the questions asked in this challenge.
 
 ## Bonus Section
+
+The purpose of the *Bonus* section is to determine if the data is fake or not. To help determine this, a histogram and bar chart were created.
+
+### Requirements
+
+In order for the *Jupyter Notebook* to connect to the *PostgreSQL* database, some steps need to be taken first:
+1. The database should be named `EmployeeSQL`.
+2. The user name for this database is `postgres` so an account using that name must exist with access to the *EmployeeSQL* database.
+3. Create a text file called config.py and save it in the *EmployeeSQL* folder. This file should have an entry of `postgres_key = ` and then the password used by the `postgres` account to connect to the *PostgreSQL* database.
+
+### Analysis
+
+After creating the histogram and seeing that most of the employees fell within the $40,000 - $50,000, which was the lowest salary range, that seemed a little perplexing.
+![sql.png](EmployeeSQL/histogram.PNG)
+
+To find out how those salaries broke out by title, a bar chart was then created.
+![barchart.png](EmployeeSQL/barchart.PNG)
+
 
 
 ## Notes
