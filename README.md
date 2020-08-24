@@ -3,7 +3,7 @@
 
 ## Overview
 
-Employee data from the 1980s and 1990s was stored in six CSV files. In order to analyse this data more easily, the data needed to be imported into tables in a *PostgreSQL* database. Through data engineering, tables for that employee data were first designed using *GenMyModel to create the ERD and then scripted, a SQL database was created in *PostgreSQL* to house those tables and data, and then the data was imported for data analysis.
+Employee data from the 1980s and 1990s was stored in six CSV files. In order to analyse this data more easily, the data needed to be imported into tables in a *PostgreSQL* database. Through data engineering, tables for that employee data were first designed using *GenMyModel* to create the ERD and then scripted, a SQL database was created in *PostgreSQL* to house those tables and data, and then the data was imported for data analysis.
 
 Then as a bonus, the goal was to determine if the data was fake using a histogram and bar chart.
 
@@ -67,7 +67,7 @@ In order for the *Jupyter Notebook* to connect to the *PostgreSQL* database, som
 
 ### Analysis
 
-After creating the histogram and seeing that most of the employees fell within the $40,000 - $50,000 range, which was the lowest salary range, that seemed a little perplexing.
+After creating the histogram and seeing that most of the employees' salaries fell within the $40,000 - $50,000 range, which was the lowest salary range, that seemed a little perplexing.
 
 ![sql.png](EmployeeSQL/histogram.PNG)
 
@@ -75,10 +75,10 @@ To find out how those salaries broke out by title, a bar chart was then created.
 
 ![barchart.png](EmployeeSQL/barchart.PNG)
 
-Based on the results from that, it was concluded that the data was indeed fake as the highest paying jobs were staff positions and senior level positions were making less than their lower level counterparts. This was confirmed after searching for employee number 499942 and finding out that name is *April Foolsday*.
+Based on the results from that, it was concluded that the data was indeed fake as the highest paying jobs were staff positions and senior level positions were making less than their lower level counterparts. This conclusion was reaffirmed after searching for employee number *499942* and finding out that this employee's name is *April Foolsday*.
 
 ## Notes
 
 The *barchart.png* and *histogram.png* files saved in the *EmployeeSQL* folder are images from the *Jupyter Notebook* **Bonus** section.
 
-Just used one query to get all the data needed in the **Bonus** section and then used dataframes and groupbys to get what was needed for each chart. Did it with 2 queries originally, which was much faster, but figured I'd work on my *pandas^, *Python*, and *Jupyter Notebook* skills by using just one query and then manipulating that.
+Just used one query to get all the data needed in the **Bonus** section and then used dataframes and groupbys to get what was needed for each chart. Did it with 2 queries originally, which was much faster, but figured I'd work on my *pandas*, *Python*, and *Jupyter Notebook* skills by using just one query and then manipulating that.
