@@ -1,4 +1,4 @@
-# sql-challenge
+## sql-challenge
 # Employee Database: A Mystery in Two Parts
 
 ## Overview
@@ -31,6 +31,30 @@ All the files that were created during this challenge are stored in this folder
 * [ERD](EmployeeSQL/ERD.jpeg) - this file is an image of the database diagram created using *GenMyModel*
 * **Jupyter Notebook** (EmployeeSQL/salaries.jpynb) - The Jupyter Notebook file that contains the scripts, histogram and bar chart for the **BONUS** section
 * **config.py** (EmployeeSQL/config.py) - This file will have to be created by the user and saved in the **EmployeeSQL** folder. This file contains the password used to connect to the database from within the Jupyter Notebook
+
+## Steps to Run the Scripts
+
+The database created for this challenge is called **EmployeeSQL**. To create the tables, run the *schemas.sql* file in the order laid out in the file starting with the **Create tables** section. The tables scripts should be run in the following order:
+1. departments
+2. titles
+3. salaries
+4. employees
+5. dept_emp
+6. dept_manager
+
+After that portion of the script has been run, load the tables by importing the CSV files in the following order:
+1. departments
+2. salaries
+3. titles
+4. employees
+5. dept_emp
+6. dept_manager
+
+Once all the data has been loaded into the SQL tables, the rest of the *schemas.sql* script can be run starting with the **Create FKs** section. Then follow that with running the **Create Indexes** section. That should get the tables ready for querying.
+
+The queries in the *queries.sql* file can be run in any order as they are not dependent on each other. They are, however, listed in the order of the questions asked in this challenge.
+
+## Bonus Section
 
 
 ## Notes
