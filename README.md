@@ -1,16 +1,17 @@
-# sql-challenge - Employee Database: A Mystery in Two Parts
+# sql-challenge
+# Employee Database: A Mystery in Two Parts
 
 ## Overview
 
-Through data engineering, design tables to hold employee data that is found in six CSV files, create a SQL database in PostgreSQL to house those tables, and then import the data for data analysis.
+Through data engineering, design tables to hold employee data that is found in six CSV files, create a SQL database in PostgreSQL to house those tables and data, and then import the data for data analysis.
 
 As a bonus, then try to determine if the data is fake using a histogram and bar chart.
 
 ### Files
 
-There are two folders in the main sql-challenge folder that hold files used in this challenge:
+There are two folders in the main **sql-challenge** folder that hold files used in this challenge:
 
-#### data folder
+#### 1. data Folder
 
 * [data](data/) - this folder contains the 6 CSV files of employee data used as the date source files 
     * [Departments](data/departments.csv) - the various departments of which an employee could be a member
@@ -21,20 +22,16 @@ There are two folders in the main sql-challenge folder that hold files used in t
     * [Titles](data/titles.csv) - the various titles an employee can have
 
 
-#### EmployeeSQL Folder
+#### 2. EmployeeSQL Folder
 
-All the files for this analysis can be found in the **WeatherPy** folder. The dataset result files are in the **output_data** subfolder and the scatter plot images are in the **images** folder.
+All the files that were created during this challenge are stored in this folder
 
-* **Jupyter Notebook** (WeatherPy/WeatherPy.jpynb) - The Jupyter Notebook file that contains the scripts and results
-* [City Data](WeatherPy/output_data/City_Data.csv) - this output file contains the approximately 500 cities that were used in the first part of this challenge 
-* [Scatter Plot Images](WeatherPy/images/) - this folder contains the various scatter plots generated in the first part of this challenge
+* [Table Schemas](EmployeeSQL/schemas.sql) - this file has the scripts to create all the database tables including primary and foreign keys and some indexes
+* [Queries](EmployeeSQL/queries.sql) - this file contains the scripts used for the analysis; each question is separated into its own query statement
+* [ERD](EmployeeSQL/ERD.jpg) - this file is an image of the database diagram created using *GenMyModel*
+* **Jupyter Notebook** (EmployeeSQL/salaries.jpynb) - The Jupyter Notebook file that contains the scripts, histogram and bar chart for the **BONUS** section
+* **config.py** (EmployeeSQL/config.py) - This file will have to be created by the user and saved in the **EmployeeSQL** folder. This file contains the password used to connect to the database from within the Jupyter Notebook
 
-#### VacationPy
-
-The files for this analysis can be found in the **VacationPy** folder (except for the City Data source file which is in the WeatherPy folder's output_data subfolder). 
-
-* **Jupyter Notebook** (VacationPy/VacationPy.jpynb) - The Jupyter Notebook file that contains the scripts and results
-* [City Data](WeatherPy/output_data/City_Data.csv) - this data source file contains the approximately 500 cities that were used in the first part of this challeng and is the output file from that 
 
 ## Notes
 
